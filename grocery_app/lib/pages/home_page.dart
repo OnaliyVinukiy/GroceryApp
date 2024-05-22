@@ -8,31 +8,43 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Column (
+        child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const SizedBox(height: 48), 
+            const SizedBox(height: 48),
             //good morning
-              const Padding(
-                padding: EdgeInsets.symmetric(horizontal: 24.0),
-                child: Text("Good Morning,"),
-              ),
-        
-        const SizedBox(height: 4),
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 24.0),
+              child: Text("Good Morning,"),
+            ),
+
+            const SizedBox(height: 4),
             //Let's order fresh items for you
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 24.0),
-            child: Text("Let's order fresh items for you", style: GoogleFonts.notoSerif(fontSize: 36,fontWeight: FontWeight.bold,),),
-          ),
-        
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 24.0),
+              child: Text(
+                "Let's order fresh items for you",
+                style: GoogleFonts.notoSerif(
+                  fontSize: 36,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+
+            const SizedBox(height: 24),
             //divider
-        
-        
+
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 24.0),
+              child: Divider(
+               
+              ),
+            ),
+
+            const SizedBox(height: 24),
             //fresh items + grid
-        
-        
-        
-          ],),
+          ],
+        ),
       ),
     );
   }
