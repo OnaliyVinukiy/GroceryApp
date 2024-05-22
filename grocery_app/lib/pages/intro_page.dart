@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:grocery_app/pages/home_page.dart';
 
 class IntroPage extends StatelessWidget {
   const IntroPage({super.key});
@@ -33,7 +34,7 @@ class IntroPage extends StatelessWidget {
           //get started button
           GestureDetector(
             onTap: () => Navigator.pushReplacement(context, MaterialPageRoute(builder: (context){
-              return HomePage();
+              return const HomePage();
             },)),
             child: Container(
               decoration: BoxDecoration(
