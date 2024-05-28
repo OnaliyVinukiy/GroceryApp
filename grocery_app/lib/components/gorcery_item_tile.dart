@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 class GroceryItemTile extends StatelessWidget {
   final String itemName;
   final String itemPrice;
@@ -17,24 +18,33 @@ class GroceryItemTile extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(12.0),
       child: Container(
-        decoration: BoxDecoration(
-          color: color[100],
-          
-        ),
-        child: Column(children: [
-          //image
-          Image.asset(
-            imagePath,
-            height: 64,
-      
-            ),
-          //item name
-      
-          //price
-      
-      
-        ],)
-      ),
+          decoration: BoxDecoration(
+            color: color[100],
+            borderRadius: BorderRadius.circular(12),
+          ),
+          child: Column(
+            children: [
+              //image
+              Image.asset(
+                imagePath,
+                height: 64,
+              ),
+
+              //item name
+              Text(itemName),
+
+              //price
+              MaterialButton(
+                onPressed: () {},
+                color: color[800],
+                child: Text(
+                  'Rs' + itemPrice,
+                  style: const TextStyle(
+                      color: Colors.white, fontWeight: FontWeight.bold),
+                ),
+              )
+            ],
+          )),
     );
   }
 }
